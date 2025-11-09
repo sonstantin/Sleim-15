@@ -1365,7 +1365,7 @@ passwordwindow.mainloop()
 
 
 
-def enter():
+def enter(event=None):
     global articlevariabl
     articlevariabl = False 
     befehl = command.get()
@@ -2015,7 +2015,7 @@ command.place(x="00", y="00")
 commant_log = ttk.Button(start, text="Enter", command=enter)
 commant_log.place(x="165", y="0")
 
-
+start.bind("<Return>", enter)
 tippsuedueberschrift = tk.Label(start, text="Dies gilt für das Südsleimische:", bg=bg_for_Label)
 tippsuedueberschrift.pack()
 tippsuedverb = tk.Label(start, text="Verben:", bg="red")
